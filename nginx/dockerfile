@@ -1,0 +1,8 @@
+FROM nginx:alpine
+LABEL maintainer="DD@gg"
+WORKDIR /apps
+COPY index.html .
+CMD [ "index.html" ]
+# COPY index.html  /usr/share/nginx/html
+# WORKDIR /apps
+

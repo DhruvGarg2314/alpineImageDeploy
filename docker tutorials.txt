@@ -1,0 +1,78 @@
+#build image 
+docker build ----
+#pull image
+docker pull ubuntu
+
+#display all image
+docker image ls
+
+docker run -it -d ubuntu
+#take image and make containers
+docker run -it -d --name mycontainer -p 80:80 ubuntu 
+
+##Enter container
+docker exec -ti mycontainer bash
+
+inside this use ubuntu commands
+Example
+apt update
+apt install nginx -y
+#start and check status of image
+service nginx status
+service nginx start
+exit
+
+####
+docker stop ID
+docker start ID
+docker restart ID
+####
+
+##remove container
+docker rm
+docker rm -f
+
+##Save container
+docker commit 2ef40999dedf custom_image1
+
+Docker Volume
+Docker Networks
+Docker Registry
+
+#To change name of image
+docker tag old new
+
+#Docker Compose
+Multiple containers at one time
+create yaml file
+
+#Docker Swarm
+Docker cluster
+multiple containers on different nodes or not
+Manager and Worker Nodes
+
+#Docker file
+from- to inform docker about base image that is to be used in container
+add- add <source> <destination> to add file from source to destination
+copy- copy <source> <destination> url cannot be added
+run- (to update ubuntu) Run<command>
+workdir- workdir<directory> to set working directory
+cmd- cmd<command> what commands to run when container starts
+volume- docker assign volume memory Volume<path>
+expose- expose<ports> which port to expose for only internal networks
+entrypoint- entrypoint<command> <parameter1> <parameter2> same to cmd
+label- label<key>=<value> add metadata to image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
